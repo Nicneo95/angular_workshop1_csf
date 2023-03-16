@@ -1,0 +1,10 @@
+.button {
+  margin-left: 10px;
+}
+
+.inventory {
+  margin: 5px;
+  border: 1px grey solid;
+  border-radius: 8px;
+  padding: 8px;
+}
