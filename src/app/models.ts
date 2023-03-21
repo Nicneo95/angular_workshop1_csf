@@ -3,6 +3,7 @@ export interface Inventory {
 // name and imageUrl are the properties inside an Inventory object  
   name: string;
   imageUrl: string;
+  quantity: number
 }
 // this is a CustomerSelection object 
 export interface CustomerSelection {

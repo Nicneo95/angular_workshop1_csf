@@ -1,11 +1,12 @@
 <h1>Inventory</h1>
 <!-- inventories is an array containing all the images -->
 <!-- to display all images we use for loop -->
-<div *ngFor="let i of inventories" class="inventory">
+<div *ngFor="let i of INVENTORIES" class="inventory">
     <img src="/assets/fruits/{{i.imageUrl}}.png" width="50">
     <span>{{i.name}}</span>
-    <!-- when the button is click it will trigger the addTo() which is + 1 to the quantity -->
-    <button type="button" class="button" (click)="addTo(1)">+</button>
-    <!-- when the button is click it will trigger the addTo() which is - 1 to the quantity -->
-    <button type="button" class="button" (click)="addTo(-1)">-</button>
+    <p>Quantity: {{ i.quantity }}</p>
+    <!-- when button is click it will increase the quantity -->
+    <button (click)="increaseQuantity(i)">+</button>
+    <!-- when button is click it will decrease the quantity -->
+  <button (click)="decreaseQuantity(i)">-</button>
 </div>

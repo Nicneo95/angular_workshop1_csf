@@ -1,6 +1,7 @@
-import { Component, Input, Output } from '@angular/core';
-import { Subject } from 'rxjs';
+import { Component, Input } from '@angular/core';
 import { CustomerSelection } from 'src/app/models';
+
+
 
 @Component({
   selector: 'app-cart',
@@ -8,14 +9,6 @@ import { CustomerSelection } from 'src/app/models';
   styleUrls: ['./cart.component.css']
 })
 export class CartComponent {
-  @Input()
-  cart: CustomerSelection[] = []
-
-  @Output()
-  onDelete = new Subject<number>()
-
-  deleteItem(i: number) {
-    console.info(`To delete: ${i}`)
-    this.onDelete.next(i);
-  }
+  // passing data from parent component to child 
+  @Input() cartItems: CustomerSelection[] = [];
 }

@@ -1,7 +1,10 @@
 <div class="center-it">
-  <h1>Yet Another Shopping Cart</h1>
+  <h1>Shopping Cart</h1>
 </div>
 <div class="side-by-side">
-  <app-inventory (onSelection)="selected($event)"></app-inventory>
-  <app-cart [cart]="content" (onDelete)="deleteItem($event)"></app-cart>
+  <!-- inventoryUpdated is the event we want to listen to -->
+  <!-- addToCart() is from the parent component -->
+  <app-inventory (inventoryUpdated)="addToCart($event)"></app-inventory>
+  <!-- bind cartItems property to inventoryUpdates -->
+  <app-cart [cartItems]="inventoryUpdates"></app-cart>
 </div>
